@@ -5,8 +5,6 @@ resource "google_compute_network" "i27-ecommerce-vpc" {
   auto_create_subnetworks = false
 }
 
-
-
 # Create Multiple Subnets
 resource "google_compute_subnetwork" "i27-ecommerce-subnets" {
   count = length(var.subnets)
